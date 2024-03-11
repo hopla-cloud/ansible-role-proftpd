@@ -1,7 +1,9 @@
 ---
 # tasks file for proftpd
 - name: Install ProFTPd Packages
-  rpm: name=proftpd state=latest update_cache=yes
+  yum:
+    name: proftpd
+    state: latest
 
 - name: Copy Configuration file
   copy:
